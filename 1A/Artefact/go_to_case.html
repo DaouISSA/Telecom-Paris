@@ -1,0 +1,30 @@
+<html>
+<head>
+        <title>Commandes ROBOT</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/website/style.css" />
+</head>
+<body>
+        <div class="header">
+                <a href="/website/home.html"><h1>Contrôle ROBOT</h1></a>
+                <a href="/website/go_to_case.html"><h1>Aller à la case</h1></a>
+                <br>
+                <input id="modeSwitch" class="switchButton" type="button" value="Passer en mode Barres" onclick="switchMode()">
+        </div>
+        <div class="main">
+                <form onsubmit="return fct_go_to_case(document.getElementById('case_x').value, document.getElementById('case_y').value);">
+                        <label for="case_x">Case X :</label>
+                        <input type="number" id="case_x" name="case_x" min=0 max=3><br>
+                        <label for="case_y">Case Y :</label>
+                        <input type="number" id="case_y" name="case_y" min=0 max=6><br><br>
+                        <input type="submit" value="Submit">
+                </form>
+
+
+                </form>
+        </div>
+        <script src="/website/script.js"></script>
+</body>
+
+</html>
+

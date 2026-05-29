@@ -1,0 +1,118 @@
+#joystickZone {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#joystick {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body {
+    background-color: #d8e0d9 ;
+    font-family: Verdana, sans-serif;
+    font-size: 100%;
+    text-align: center;
+ }
+
+.header{
+    width:100%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 200%;
+    color: navy;
+    text-align:center;
+ }
+h2 {
+    font-size: 150%;
+    color: red;
+    padding-left: 15px;
+    text-align:center;
+ }
+
+
+
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    border: 0;
+    line-height: 2.5;
+    padding: 50px 150px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    width:130px;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Position des barres à gauche et à droite */
+#barreGauche {
+    left: 50px; /* Distance par rapport à la gauche */
+    top: 50%; /* Centrer verticalement */
+}
+
+#barreDroite {
+    right: 50px; /* Distance par rapport à la droite */
+    top: 50%; /* Centrer verticalement */
+}
+
+.vertical-range {
+    transform: rotate(-90deg);
+    -webkit-appearance: none;
+    width: 30%;
+    height: 30px;
+    border-radius: 5px;
+    background: #404aff;
+    position: absolute;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.vertical-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}
+
+.vertical-range::-moz-range-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff0000;
+    cursor: pointer;
+}

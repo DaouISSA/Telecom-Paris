@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes ROBOT</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Empêche le scroll */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #joystickZone {
+            width: 80vmin;  /* Utilise 80% du côté le plus petit (largeur ou hauteur) */
+            height: 80vmin; /* Assure que le joystick est carré */
+            background-color: #ccc;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #joystick {
+            width: 20vmin; /* Taille du joystick par rapport à l'écran */
+            height: 20vmin;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="joystickZone">
+        <div id="joystick"></div>
+    </div>
+
+    <script src="/website/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Commandes ROBOT</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/website/style.css" />
+</head>
+<body>
+	<div class="header">
+		<a href="/website/home.html"><h1>Contrôle ROBOT</h1></a>
+		<a href="/website/go_to_case.html"><h1>Aller à la case</h1></a>
+		<br>
+		<input id="modeSwitch" class="switchButton" type="button" value="Passer en mode Barres" onclick="switchMode()">
+	</div>
+
+		<h2>Commandes robot</h2>
+	<div class="main">
+		<div id="modeBoutons" class="mode">
+			<table class="tabcenter">
+				<tr>
+					<td></td>
+					<td><input id="btnAvancer" class="button" type="button" value="Avancer" onclick="fct_Avancer()"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input id="btnGauche" class="button" type="button" value="Gauche" onclick="fct_Gauche()"></td>
+					<td><input id="btnStop" class="button" type="button" value="Stop" onclick="fct_Stop()"></td>
+					<td><input id="btnDroite" class="button" type="button" value="Droite" onclick="fct_Droite()"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input id="btnReculer" class="button" type="button" value="Reculer" onclick="fct_Reculer()"></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+
+		<div id="modeBarres" class="mode" style="display:none;">
+			<table class="tabcenter">
+				<tr>
+					<td><input id="barreGauche" class="vertical-range" type="range" min="-80" max="80" value="0" oninput="fct_BarreGauche()"></td>
+				</tr>
+				<tr>
+					<td><input id="barreDroite" class="vertical-range" type="range" min="-80" max="80" value="0" oninput="fct_BarreDroite()"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script src="/website/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrôle du Robot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contrôle du Robot</h1>
+    <div>
+        <button onclick="move('forward')">Avancer</button>
+        <button onclick="move('backward')">Reculer</button>
+    </div>
+    <div>
+        <button onclick="move('left')">Gauche</button>
+        <button onclick="move('right')">Droite</button>
+    </div>
+    <script>
+        function move(direction) {
+            console.log('Le robot se déplace vers : ' + direction);
+            // Ajoutez ici le code pour envoyer la commande au robot
+        fetch('http://adresse-du-robot/commande', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ direction: direction })
+        })
+        .then(response => response.json())
+        .then(data => console.log('Réponse du robot:', data))
+        .catch(error => console.error('Erreur:', error));
+        }
+    </script>
+    <style>
+        
+        
+    </style>
+</body>
+</html>
